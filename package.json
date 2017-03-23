@@ -1,5 +1,5 @@
 {
-  "name": "my-glitch-app",
+  "name": "URL Shortener",
   "version": "0.0.1",
   "description": "url shortening service",
   "main": "server.js",
