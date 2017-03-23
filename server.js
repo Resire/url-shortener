@@ -1,19 +1,16 @@
-// server.js
-// where your node app starts
+"use strict";
 
-// init project
-var express = require('express');
-var app = express();
+const express = require('express');
+const uPath = require('./modules/unique-path');
 
-// we've started you off with Express, 
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
+const app = express();
 
-// http://expressjs.com/en/starter/basic-routing.html
-app.get("/", function (request, response) {
+app.get("/", function (req, res) {
+  let shortURL = `https://${req.headers.host}/${uPath(6)}`;
   
+  res.send(shortURL);
 });
 
-// listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
