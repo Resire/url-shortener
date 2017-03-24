@@ -1,5 +1,5 @@
 {
-  "name": "URL Shortener",
+  "name": "url-shortener",
   "version": "0.0.1",
   "description": "url shortening service",
   "main": "server.js",
@@ -14,7 +14,7 @@
     "node": "6.9.x"
   },
   "repository": {
-    "url": "https://glitch.com/#!/project/welcome-project"
+    "url": "https://github.com/Resire/url-shortener"
   },
   "license": "MIT",
   "keywords": [
