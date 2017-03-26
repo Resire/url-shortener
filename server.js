@@ -1,18 +1,23 @@
 "use strict";
 
-// Package dependancies
+// Package Dependancies
 const express = require('express');
+const mongoose = require('mongoose');
 
 // Modules
 const opt = require('./config.js');
 const uPath = require('./modules/unique-path');
 
-// Routes
+// Initiate Server
 const server = express();
 
+// Database Connection
+mongoose.connect(`mongodb://${opt.db.user}:${opt.db.password}@ds141950.mlab.com:41950/url_shortener`);
+
+// Routes
 server.get("/", function (req, res) {
-  let shortURL = `${opt.host}/${uPath(6)}`;
-  res.send(shortURL);
+  let short = shortURL.shorten('https://google.com', opt.host);
+  res.json(short);
 });
 
 // Listener
