@@ -1,8 +1,5 @@
 "use strict";
 
-// Package dependancies
-const mongoose = require('mongoose');
-
 // Modules
 const uPath = require('./unique-path');
 
@@ -25,7 +22,7 @@ exports.shorten = (url, host) => {
     json.short_url = `${host}/${result.path}`;
   }
   else {
-    result.error = `${url} is not a valid URL`
+    result.error = 'Please use a valid URL';
   }
 
   result.json = json;
