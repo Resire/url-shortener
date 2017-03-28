@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 
 // Modules
 const opt = require('./config.js');
-const uPath = require('./modules/unique-path');
+const shortURL = require('./modules/url-shortener.js');
 
 // Initiate Server
 const server = express();
